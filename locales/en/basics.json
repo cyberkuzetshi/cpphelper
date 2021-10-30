@@ -43,7 +43,9 @@
 		"name": "Variables",
 		"page_1":
 		[
-			"The types char, wchar_t, char16_t and char32_t are used to represent characters in the application. Lets define some variables: \n 1. <code>char c = d;</code> \n 2. <code>wchar_t d = c;</code> \n"
+			"The types char, wchar_t, char16_t and char32_t are used to represent characters in the application. Lets define some variables: \n 1. <code>char c = d;</code> \n 2. <code>wchar_t d = c;</code> \n",
+			"A char variable takes one character in single quotes as its value: char c = 'd'. You can also assign a number from the list above: char c = 120. In this case, the value of variable c will be that character, which has code 120 in the ASCII table. \n Note, that to output wchar_t characters to the console, do not use std::cout, but use <b>std::wcout</b> stream: \n 1. #include <iostream> \n 2. int main() \n 3. { \n 4. char a = 'H'; \n 5. wchar_t b = 'e'; \n 6. std::wcout << a << b << '\n'; \n 7. return 0; \n 8. }",
+			"The std::wcout stream can work with both char and wchar_t. And the std::cout thread for the wchar_t variable will print its numeric code instead of a character.\n The <b>char16_t</b> and <b>char32_t</b> types have been added to the C++11 standard to allow using Unicode. However, the operating system level has not yet implemented threads to work with these types. So, if you need to output these variables to the console, you have to convert them to the char or wchar_t types: \n 
 		]
 	},
 	"arithmetical_operations": 
